@@ -1,23 +1,20 @@
-//title
-//description
-//targetdate
-//type
-//prioridade
-//subtasks
-
 export type Task = {
-    tittle: string,
+    title: string,
     description: string,
     targetDate: string,
-    type: string,
-    priority: string,
-    subTasks: Task []
+    type?: string,
+    priority?: string,
+    subTasks?: Task []
 }
 
-export class TodoList{
-    private tasks: Task[] = []
+export class ToDoList {
+  private tasks: Task[] = []
 
-    add(task:Task){
-        this.tasks.push(task)
-    }
+  add (task: Task) {
+    this.tasks.push(task)
+  }
+
+  getTasks () {
+    return this.tasks
+  }
 }
